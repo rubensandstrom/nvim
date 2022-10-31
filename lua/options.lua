@@ -31,6 +31,8 @@ options = {
     signcolumn = "yes",
     wrap = false,
     scrolloff = 8,
+    foldmethod = 'indent',
+    foldlevel = 99,
     sidescrolloff = 8,
 
 	}
