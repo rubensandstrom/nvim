@@ -1,7 +1,6 @@
-require "plugin_manager"
-require "options"
---require "keymaps"
 
-require "plugins.treesitter"
-require "plugins.mini"
-require "lspconfig"
+
+require('plugins')
+require('configs')
+require('options')
+require('keymaps')
