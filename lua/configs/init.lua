@@ -4,5 +4,4 @@ require('configs.tree')
 require('configs.treesitter')
 require('configs.lsp')
 require('configs.cmp')
-
-
+require('configs.autopairs')

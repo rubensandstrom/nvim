@@ -15,14 +15,19 @@ local packer_bootstrap = ensure_packer()
 
 -- Plugins
 return require('packer').startup(function(use)
+  -- Packer
   use 'wbthomason/packer.nvim'
+
+  -- Tree menue
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
+
+  -- Treesitter 
   use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  } 
+  }
 
   -- Color scheme
   use 'savq/melange'
@@ -43,8 +48,12 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lua'
 
+  -- Snippet engine
   use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip' 
+  use 'saadparwaiz1/cmp_luasnip'
+
+  -- Auto pairs
+  use 'windwp/nvim-autopairs'
 
   if packer_bootstrap then
     require('packer').sync()
