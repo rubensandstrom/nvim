@@ -1,4 +1,4 @@
--- installs packer
+-- Installs packer
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -13,7 +13,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 
--- plugins
+-- Plugins
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-tree.lua'
@@ -24,15 +24,28 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   } 
 
-  -- color scheme
+  -- Color scheme
   use 'savq/melange'
 
-  -- lsp config
+  -- Lsp config
   use {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig'
+    'neovim/nvim-lspconfig',
+    'simrat39/rust-tools.nvim'
   }
+
+  -- Autocomplete
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lua'
+
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip' 
+
   if packer_bootstrap then
     require('packer').sync()
   end
