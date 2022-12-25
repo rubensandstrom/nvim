@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
   -- Auto pairs
   use 'windwp/nvim-autopairs'
 
+  -- Comment out and in
+  use 'terrortylor/nvim-comment'
+
   if packer_bootstrap then
     require('packer').sync()
   end

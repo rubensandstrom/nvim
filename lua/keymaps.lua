@@ -1,13 +1,13 @@
--- 200 ms for key timeout
-vim.o.timeoutlen = 200
+-- 500 ms for key timeout
+vim.o.timeoutlen = 500
 
 -- Wrapper to avoid boilerplate
-local map = function(mode, lhs, rhs) 
+local map = function(mode, lhs, rhs)
   vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
 end
 
 -- Space as leader
-vim.g.mapleader = ' ' 
+vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 map('n', '<Space>', '<Nop>')
 
@@ -26,7 +26,7 @@ map('n', '<Enter>', '<Nop>')
 
 map('v', '<Left>', '<Nop>')
 map('v', '<Right>', '<Nop>')
-map('v', '<Up>', '<Nop>') 
+map('v', '<Up>', '<Nop>')
 map('v', '<Down>', '<Nop>')
 map('v', '<BS>', '<Nop>')
 map('v', '<Enter>', '<Nop>')
@@ -54,6 +54,5 @@ map('n', '<Leader>ww', '<Cmd>w!<CR>')
 map('n', '<Leader>wq', vim.cmd.wq)
 map('n', '<Leader>q', vim.cmd.q)
 map('n', '<Leader>qq', '<Cmd>q!<CR>')
-
 
 map('n', '<Leader>n', vim.cmd.NvimTreeFindFileToggle)
