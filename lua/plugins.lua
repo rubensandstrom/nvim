@@ -58,6 +58,12 @@ return require('packer').startup(function(use)
   -- Comment out and in
   use 'terrortylor/nvim-comment'
 
+  -- Syntax highlighting for NES etc
+  use 'maxbane/vim-asm_ca65'
+
+  -- Syntax highlighting for riscv
+  -- use 'henry-hsieh/riscv-asm-vim'
+
   if packer_bootstrap then
     require('packer').sync()
   end
