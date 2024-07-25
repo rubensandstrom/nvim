@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
   -- Syntax highlighting for riscv
   -- use 'henry-hsieh/riscv-asm-vim'
 
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
   if packer_bootstrap then
     require('packer').sync()
   end
